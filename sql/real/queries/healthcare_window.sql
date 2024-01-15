@@ -1,0 +1,1 @@
+SELECT facility_id ,facility_name ,count(*) OVER (ORDER BY score DESC) AS rank FROM (select facility_id ,facility_name,case when isnumeric(score) then score::float else 0 end as score from healthcare where measure_name = 'MRSA Bacteremia') x;
