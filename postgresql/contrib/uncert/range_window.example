@@ -1,0 +1,6 @@
+DROP TABLE username_test;
+
+CREATE TABLE username_test (
+	name		text,
+	username	text not null
+);

@@ -1,0 +1,5 @@
+# range_window extension
+comment = 'functions for ranged window functions'
+default_version = '1.0'
+module_pathname = '$libdir/range_window'
+relocatable = true
