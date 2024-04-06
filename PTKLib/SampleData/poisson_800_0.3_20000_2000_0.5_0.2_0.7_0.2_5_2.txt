@@ -1,0 +1,16 @@
+k=800
+p=0.3
+
+-------------------------------------------
+Compute the exact answer (Algorithm: RC+LR)
+-------------------------------------------
+time used: 93 seconds
+
+-------------------------------------------
+Using the Poisson Approximation method:
+-------------------------------------------
+Precision=0.939641	recall=0.984615
+scan depth (stopping condition)=2593
+time used: 0 seconds
+
+

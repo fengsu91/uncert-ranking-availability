@@ -1,0 +1,27 @@
+k=200
+p=0.3
+sample size=2500
+Report the precision every 500 samples
+
+-------------------------------------------
+Compute the exact answer (Algorithm: RC+LR)
+-------------------------------------------
+time used: 6 seconds
+
+-------------------------------------------
+Using the sampling method:
+-------------------------------------------
+SampleSize=500, ErrorRate=0.0340879, Precision=0.985965, Recall=0.985965;
+
+SampleSize=1000, ErrorRate=0.0239937, Precision=0.992958, Recall=0.989474;
+
+SampleSize=1500, ErrorRate=0.0191912, Precision=0.989474, Recall=0.989474;
+
+SampleSize=2000, ErrorRate=0.0168257, Precision=0.992958, Recall=0.989474;
+
+SampleSize=2500, ErrorRate=0.0153572, Precision=0.996466, Recall=0.989474;
+
+average sample length=	624.781
+time used: 14 seconds
+
+

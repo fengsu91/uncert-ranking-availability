@@ -1,0 +1,185 @@
+The data, code and instructions available here are meant to allow reproducing some measures from the following paper
+
+Ming Hua, Jian Pei, Wenjie Zhang, and Xuemin Lin. Ranking queries on uncertain data: A
+probabilistic threshold approach. In Proc. ACM International
+Conference on Management of Data (SIGMOD'08), Vancouver, Canada, June 2008.
+
+1. Run "uncertaintopk.bat".
+- As an alternative, a sample data set which contains all required data to generate the tables and figures in Section 7 of the above paper can be found in the folder "SampleData".
+
+2. Generate the tables and figures in the above paper as follows:
+
+- Table 4 and Table 5: the data can be found in the following file:
+        "10_0.3_iceberg-result.txt"
+
+- Figure 4 and Figure 5: the data can be found in the following files:
+* 4(a) and 5(a)
+    4(a) "Exact algo" and 5(a) "RC", "RC+AR", "RC+LR" can be found in:
+        exact_200_0.3_20000_2000_0.1_0.2_0.7_0.2_5_2.txt
+        exact_200_0.3_20000_2000_0.3_0.2_0.7_0.2_5_2.txt
+        exact_200_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        exact_200_0.3_20000_2000_0.7_0.2_0.7_0.2_5_2.txt
+        exact_200_0.3_20000_2000_0.9_0.2_0.7_0.2_5_2.txt
+    4(a) "Avg sample length" and 5(a) "Sampling" can be found in:
+        sampling_200_0.3_1000_1000_20000_2000_0.1_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_20000_2000_0.3_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_20000_2000_0.7_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_20000_2000_0.9_0.2_0.7_0.2_5_2.txt
+    4(a) "Stopping condition" can be found in:
+        poisson_200_0.3_20000_2000_0.1_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.3_20000_2000_0.3_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.3_20000_2000_0.7_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.3_20000_2000_0.9_0.2_0.7_0.2_5_2.txt
+
+* 4(b) and 5(b)
+    4(b) "Exact algo" and 5(b) "RC", "RC+AR", "RC+LR" can be found in:
+        exact_200_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        exact_200_0.3_20000_1000_0.5_0.2_0.7_0.2_10_2.txt
+        exact_200_0.3_20000_667_0.5_0.2_0.7_0.2_15_2.txt
+        exact_200_0.3_20000_500_0.5_0.2_0.7_0.2_20_2.txt
+        exact_200_0.3_20000_400_0.5_0.2_0.7_0.2_25_2.txt
+    4(b) "Avg sample length" and 5(b) "Sampling" can be found in:
+        sampling_200_0.3_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_20000_1000_0.5_0.2_0.7_0.2_10_2.txt
+        sampling_200_0.3_1000_1000_20000_667_0.5_0.2_0.7_0.2_15_2.txt
+        sampling_200_0.3_1000_1000_20000_500_0.5_0.2_0.7_0.2_20_2.txt
+        sampling_200_0.3_1000_1000_20000_400_0.5_0.2_0.7_0.2_25_2.txt
+    4(b) "Stopping condition" can be found in:
+        poisson_200_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.3_20000_1000_0.5_0.2_0.7_0.2_10_2.txt
+        poisson_200_0.3_20000_667_0.5_0.2_0.7_0.2_15_2.txt
+        poisson_200_0.3_20000_500_0.5_0.2_0.7_0.2_20_2.txt
+        poisson_200_0.3_20000_400_0.5_0.2_0.7_0.2_25_2.txt
+
+* 4(c) and 5(c)
+    4(c) "Exact algo" and 5(c) "RC", "RC+AR", "RC+LR" can be found in:
+        exact_200_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        exact_400_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        exact_600_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        exact_800_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        exact_1000_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+    4(c) "Avg sample length" and 5(c) "Sampling" can be found in:
+        sampling_200_0.3_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_400_0.3_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_600_0.3_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_800_0.3_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_1000_0.3_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+    4(c) "Stopping condition" can be found in:
+        poisson_200_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_400_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_600_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_800_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_1000_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+
+* 4(d) and 5(d)
+    4(d) "Exact algo" and 5(d) "RC", "RC+AR", "RC+LR" can be found in:
+        exact_200_0.2_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        exact_200_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        exact_200_0.4_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        exact_200_0.5_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        exact_200_0.6_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        exact_200_0.7_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+    4(d) "Avg sample length" and 5(d) "Sampling" can be found in:
+        sampling_200_0.2_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.4_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.5_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.6_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.7_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+    4(d) "Stopping condition" can be found in:
+        poisson_200_0.2_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.4_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.5_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.6_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.7_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+
+- Figure 6
+* 6(a)(b) "k=200" can be found in:
+       sampling_200_0.3_2500_500_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+* 6(a)(b) "k=1000" can be found in:
+       sampling_1000_0.3_2500_500_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+
+- Figure 7
+* 7(a) "Precision(Sampling)" and "Recall(Sampling)" can be found in:
+        sampling_200_0.3_1000_1000_20000_2000_0.1_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_20000_2000_0.3_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_20000_2000_0.7_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_20000_2000_0.9_0.2_0.7_0.2_5_2.txt
+       "Precision(Sampling)" and "Recall(Sampling)" can be found in:
+        poisson_200_0.3_20000_2000_0.1_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.3_20000_2000_0.3_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.3_20000_2000_0.7_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.3_20000_2000_0.9_0.2_0.7_0.2_5_2.txt
+
+* 7(b) "Precision(Sampling)" and "Recall(Sampling)" can be found in:
+        sampling_200_0.3_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_20000_1000_0.5_0.2_0.7_0.2_10_2.txt
+        sampling_200_0.3_1000_1000_20000_667_0.5_0.2_0.7_0.2_15_2.txt
+        sampling_200_0.3_1000_1000_20000_500_0.5_0.2_0.7_0.2_20_2.txt
+        sampling_200_0.3_1000_1000_20000_400_0.5_0.2_0.7_0.2_25_2.txt
+       "Precision(Sampling)" and "Recall(Sampling)" can be found in:
+        poisson_200_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.3_20000_1000_0.5_0.2_0.7_0.2_10_2.txt
+        poisson_200_0.3_20000_667_0.5_0.2_0.7_0.2_15_2.txt
+        poisson_200_0.3_20000_500_0.5_0.2_0.7_0.2_20_2.txt
+        poisson_200_0.3_20000_400_0.5_0.2_0.7_0.2_25_2.txt
+
+* 7(c) "Precision(Sampling)" and "Recall(Sampling)" can be found in:
+        sampling_200_0.3_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_400_0.3_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_600_0.3_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_800_0.3_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_1000_0.3_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+       "Precision(Sampling)" and "Recall(Sampling)" can be found in:
+        poisson_200_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_400_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_600_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_800_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_1000_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+
+* 7(d) "Precision(Sampling)" and "Recall(Sampling)" can be found in:
+        sampling_200_0.2_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.4_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.5_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.6_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.7_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+       "Precision(Sampling)" and "Recall(Sampling)" can be found in:
+        poisson_200_0.2_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.4_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.5_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.6_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        poisson_200_0.7_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+
+- Figure 8
+* 8(a) "RC", "RC+AR", and "RC+LR" can be found in:
+        exact_200_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        exact_200_0.3_40000_4000_0.5_0.2_0.7_0.2_5_2.txt
+        exact_200_0.3_60000_6000_0.5_0.2_0.7_0.2_5_2.txt
+        exact_200_0.3_80000_8000_0.5_0.2_0.7_0.2_5_2.txt
+        exact_200_0.3_100000_10000_0.5_0.2_0.7_0.2_5_2.txt
+       "Sampling" can be found in:
+        sampling_200_0.3_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_40000_4000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_60000_6000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_80000_8000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_100000_10000_0.5_0.2_0.7_0.2_5_2.txt
+
+* 8(b) "RC", "RC+AR", and "RC+LR" can be found in:
+        exact_200_0.3_20000_500_0.5_0.2_0.7_0.2_5_2.txt
+        exact_200_0.3_20000_1000_0.5_0.2_0.7_0.2_5_2.txt
+        exact_200_0.3_20000_1500_0.5_0.2_0.7_0.2_5_2.txt
+        exact_200_0.3_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        exact_200_0.3_20000_2500_0.5_0.2_0.7_0.2_5_2.txt
+       "Sampling" can be found in:
+        sampling_200_0.3_1000_1000_20000_500_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_20000_1000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_20000_1500_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_20000_2000_0.5_0.2_0.7_0.2_5_2.txt
+        sampling_200_0.3_1000_1000_20000_2500_0.5_0.2_0.7_0.2_5_2.txt

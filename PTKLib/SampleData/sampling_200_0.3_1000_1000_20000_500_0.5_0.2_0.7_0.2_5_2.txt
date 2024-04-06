@@ -1,0 +1,17 @@
+k=200
+p=0.3
+sample size=1000
+Report the precision every 1000 samples
+
+-------------------------------------------
+Compute the exact answer (Algorithm: RC+LR)
+-------------------------------------------
+time used: 1 seconds
+
+-------------------------------------------
+Using the sampling method:
+-------------------------------------------
+average sample length=	424.568
+time used: 2 seconds
+
+

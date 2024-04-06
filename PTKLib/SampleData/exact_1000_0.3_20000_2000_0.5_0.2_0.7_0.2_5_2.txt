@@ -1,0 +1,28 @@
+k=1000
+p=0.3
+
+----------------------------------------------------------------
+* Algorithm: RC
+----------------------------------------------------------------
+   Total calculation: 4760155
+   Total tuples read (scan depth): 3085
+time used: 4974 seconds
+
+
+----------------------------------------------------------------
+* Algorithm: RC+AR
+----------------------------------------------------------------
+   total calculation: 1440632
+   total tuples read (scan depth): 3085
+time used: 1735 seconds
+
+
+----------------------------------------------------------------
+* Algorithm: RC+LR
+----------------------------------------------------------------
+   Total calculation: 126133
+   Total tuples read (scan depth): 3085
+time used: 171 seconds
+
+
+Answer set size = 1468

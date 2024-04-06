@@ -1,0 +1,118 @@
+PTKLib contains the executable code of the algorithms and the source
+code of the data set generator described in the following paper.
+
+Ming Hua, Jian Pei, Wenjie Zhang, and Xuemin Lin. Ranking queries on
+uncertain data: A probabilistic threshold approach. In Proc. ACM
+International Conference on Management of Data (SIGMOD'08),
+Vancouver, Canada, June 2008.
+
+NOTE:
+
+- Instructions of reproducing some measures from the above paper are
+provided in the file SAMPLES
+
+- The source code of the synthetic data set generator can be found
+in the folder src_DataGenerator.
+
+- Please cite the above paper if the program is useful for you.
+
+- The program was implemented by Ming Hua using Microsoft Visual C++
+V6.0 in November, 2007. All rights of the implementation are
+reserved by the authors. Permission to use the executable code and
+the source code is granted here without fee for academic, education,
+and/or personal uses only.
+
+- The program is released as the way it is, which should be regarded
+as "freeware". The authors assume no responsibility for any
+potential problems.
+
+CONTENT:
+
+- Folder "data":
+  * The output file folder.
+
+- Folder "SampleData":
+  * Contains the sample data set used to reproduce the measures from the above paper.
+
+- Folder "src_DataGenerator":
+  * The source code of the synthetic data set generator.
+
+- datagenerator.exe
+  * The executable code of the synthetic data set generator.
+  * datagenerator.exe is invoked by providing the arguments at the command line as:
+      datagenerator argv1 argv2 argv3 argv4 argv5 argv6 argv7 argv8
+    = argv1: the number of tuples in the data set
+    = argv2: the number of rules in the data set
+    = argv3: the mean of the membership probability of each tuple (following the normal distribution)
+    = argv4: the variance of the membership probability of each tuple (following the normal distribution)
+    = argv5: the mean of the membership probability of each rule (following the normal distribution)
+    = argv6: the variance of the membership probability of each rule (following the normal distribution)
+    = argv7: the mean of the size of the rule (i.e., the number of tuples in a rule) (following the normal distribution)
+    = argv8: the variance of the size of the rule (i.e., the number of tuples in a rule) (following the normal distribution)
+  * Example: datagenerator 20000 2000 0.5 0.2 0.7 0.2 5 2
+  * Output file format:
+    = "tuple_argv1_argv2_argv3_argv4_argv5_argv6_argv7_argv8.txt":
+      The output file that contains the tuple information. Each row is in the format: <tid, tscore, tprob>
+      (tid: id of the tuple; tscore: the ranking score of the tuple; tprob: the membership probability of the tuple. Tuples are in the ranking order.)
+    = "rule_argv1_argv2_argv3_argv4_argv5_argv6_argv7_argv8.txt":
+      The output file that contains the rule information. Each row is in the format: <rid, tid>
+      (rid: id of the rule; tid: id of the tuple in the rule. The tuples in each rule are in the ranking order.)
+
+- Topk.exe
+  * The executable code of the three exact algorithms: RC, RC+AR, RC+LR
+  * Topk.exe is invoked by providing the arguments at the command line as:
+      Topk argv1 argv2 argv3 argv4 argv5
+    = argv1: query parameter k
+    = argv2: probability threshold p
+    = argv3: name of the input file which contains the tuple information
+    = argv4: name of the input file which contains the rule information
+    = argv5: name of the output
+  * Example: Topk 200 0.3 tuple_20000_2000_0.5_0.2_0.7_0.2_5_2 rule_20000_2000_0.5_0.2_0.7_0.2_5_2 20000_2000_0.5_0.2_0.7_0.2_5_2
+  * The output file is named "exact_argv1_argv2_argv5.txt"
+
+
+- SampleTopk.exe
+  * The executable code of the sampling algorithm.
+  * SampleTopk.exe is invoked by providing the arguments at the command line as:
+      sampletopk argv1 argv2 argv3 argv4 argv5 argv6 argv7
+    = argv1: query parameter k
+    = argv2: probability threshold p
+    = argv3: the number of samples drawn
+    = argv4: the frequency of quality reporting (i.e., the approximation quality is reported every argv4 samples)
+    = argv5: name of the input file which contains the tuple information
+    = argv6: name of the input file which contains the rule information
+    = argv7: name of the output
+  * Example: sampletopk 200 0.3 1000 200 tuple_20000_2000_0.5_0.2_0.7_0.2_5_2 rule_20000_2000_0.5_0.2_0.7_0.2_5_2 20000_2000_0.5_0.2_0.7_0.2_5_2
+  * The output file is named "sampling_argv1_argv2_argv3_argv4_argv7.txt"
+
+- PoissonTopk.exe
+  * The executable code of the Poisson approximation algorithm.
+  * PoissonTopk.exe is invoked by providing the arguments at the command line as:
+      PoissonTopk argv1 argv2 argv3 argv4 argv5
+    = argv1: query parameter k
+    = argv2: probability threshold p
+    = argv3: name of the input file which contains the tuple information
+    = argv4: name of the input file which contains the rule information
+    = argv5: name of the output file
+  * Example: PoissonTopk 200 0.3 tuple_20000_2000_0.5_0.2_0.7_0.2_5_2 rule_20000_2000_0.5_0.2_0.7_0.2_5_2 20000_2000_0.5_0.2_0.7_0.2_5_2
+  * The output file is named "poissontopk_argv1_argv2_argv5.txt"
+
+- ptk-kranks.exe
+  * The executable code that outputs the answers to a PT-k query and a kRanks query
+  * ptk-kranks.exe is invoked by providing the arguments at the command line as:
+       ptk-kranks argv1 argv2 argv3 argv4 argv5
+    = argv1: query parameter k
+    = argv2: probability threshold p
+    = argv3: name of the input file which contains the tuple information
+    = argv4: name of the input file which contains the rule information
+    = argv5: name of the output file
+  * Example: ptk-kranks 10 0.3 iceberg-tuple iceberg-rule iceberg-result
+  * Output file "argv1_argv2_argv5.txt"
+
+- SAMPLE
+  * The instruction of reproducing the measures from the above paper.
+
+- SampleScript.bat
+  * The scripts used to reproduce the measures from the above paper.
+
+- README
